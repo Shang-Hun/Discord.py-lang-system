@@ -21,7 +21,7 @@ class Ping(commands.Cog):
         self.process = psutil.Process(os.getpid())
 
 
-    def us_get_bot_uptime(self, *, brief=False):
+    def en_get_bot_uptime(self, *, brief=False):
         now = datetime.datetime.utcnow()
         delta = now - start_time
         hours, remainder = divmod(int(delta.total_seconds()), 3600)
@@ -74,7 +74,7 @@ class Ping(commands.Cog):
         await ctx.trigger_typing()
         bot = round((t2 - t) * 1000)
         ws = int(self.bot.latency * 1000)
-        us_text = self.us_get_bot_uptime(brief=True)
+        us_text = self.en_get_bot_uptime(brief=True)
         tw_text = self.tw_get_bot_uptime(brief=True)
         
         if str(result[0]) == 'en':
