@@ -10,7 +10,7 @@ with open('config.json', mode='r', encoding='utf8') as config:
 owner_id = int(c['owner_id'])
 
 
-class Main(commands.Cog):
+class Lang(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
@@ -78,4 +78,4 @@ class Main(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(Main(bot))
+    bot.add_cog(Lang(bot))
